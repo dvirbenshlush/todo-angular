@@ -29,6 +29,16 @@ export class TodoListComponent implements OnInit {
   }
 
 
+  public onTodoClick(todo:ITodo,index:number){
+    this.todoService.setSelectedTodo(todo);
+    this.todos.forEach(todo=>{
+      if(todo.selected){
+        todo.selected=false;
+      }
+    })
+    this.todos[index].selected=true;
+  }
+
 }
 
 
