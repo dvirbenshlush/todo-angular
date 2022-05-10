@@ -1,5 +1,5 @@
 import { templateJitUrl } from '@angular/compiler';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { ITodo } from 'src/app/models/todo.interface';
 import { TodoService } from 'src/app/services/todo.service';
@@ -9,7 +9,7 @@ import { TodoService } from 'src/app/services/todo.service';
   templateUrl: './todo-list.component.html',
   styleUrls: ['./todo-list.component.scss']
 })
-export class TodoListComponent implements OnInit {
+export class TodoListComponent implements OnInit, OnDestroy {
 
   public todos: Array<ITodo> = [];
 
@@ -37,6 +37,7 @@ export class TodoListComponent implements OnInit {
       }
     })
     this.todos[index].selected=true;
+    // console.log('this.todos[index].selected ' + this.todos[index].selected)
   }
 
 }

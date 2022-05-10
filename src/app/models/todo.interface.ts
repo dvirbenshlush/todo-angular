@@ -1,7 +1,8 @@
 export interface ITodo{
     title:string;
     descripsion:string;
-    isComplated:boolean;
+    isCompleted:boolean;
     isArchived:boolean;
     endDate: string;
+    selected:boolean;
 }
