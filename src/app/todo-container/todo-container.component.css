@@ -1,0 +1,20 @@
+.todos-container{
+    padding: 10px;
+    height: calc(100vh - 84px);
+    display: flex;
+   
+}
+.list-container {
+    width: 25%;
+    padding: 10px;
+
+}
+.todo-container {
+    width: 75%;
+    padding: 10px;
+}
+.add-new-todo-btn{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
